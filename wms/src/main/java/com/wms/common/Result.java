@@ -10,21 +10,21 @@ public class Result {
     private Object data; //数据
 
     public static Result fail() {
-        return result(400, "失败", 0L, null);
+        return result(400, "fail", 0L, null);
     }
 
     public static Result success() {
-        return result(200, "成功", 0L, null);
+        return result(200, "success", 0L, null);
     }
 
     public static Result success(Object data) {
-        return result(200, "成功", 0L, data);
+        return result(200, "success", 0L, data);
     }
 
     public static Result success(Long total, Object data) {
-        return result(200, "成功", total, data);
+        return result(200, "success", total, data);
     }
-    
+
     private static Result result(int code, String msg, Long total, Object data) {
         Result res = new Result();
         res.setData(data);
