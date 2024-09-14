@@ -15,3 +15,5 @@
 - **前端**: Vue.js, HTML5, CSS3, JavaScript
 - **其他工具**: Maven, Git, Postman
 
+![8941726331581_ pic](https://github.com/user-attachments/assets/86d53637-4cc5-48aa-8647-b116aa1c10f5)
+![8931726331562_ pic](https://github.com/user-attachments/assets/13edc716-2b3a-4f3f-af77-4ca82d46116e)
