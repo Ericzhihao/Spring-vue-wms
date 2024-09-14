@@ -23,8 +23,7 @@ public class GoodsController {
     @Resource
     IGoodsService goodsService;
 
-    @Resource
-    IInfoService iInfoService;
+
 
     // 根据物品名查询
     @GetMapping("/findByName")
@@ -39,17 +38,7 @@ public class GoodsController {
         return goodsService.saveOrUpdate(goods) ? Result.success() : Result.fail();
     }
 
-    //删除
-    @GetMapping("/delete")
-    public Result delete(Integer id) {
 
-        // 删除对应物品的通知Info
-        List listInfo = iInfoService.lambdaQuery().eq(Info::getGoods, id).list();
-        Info info = (Info) listInfo.get(0);
-        iInfoService.removeById(info.getId());
-
-        return goodsService.removeById(id) ? Result.success() : Result.fail();
-    }
 
     // 前端用这个查询
     @PostMapping("/listPage")
